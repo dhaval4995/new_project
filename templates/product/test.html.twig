@@ -1,0 +1,8 @@
+{# templates/product/test.html.twig #}
+<h3>The test has following errors</h3>
+
+<ul>
+{% for error in errors %}
+    <li>{{ errors.message }}</li>
+{% endfor %}   
+</ul>
