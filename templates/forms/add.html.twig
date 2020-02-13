@@ -1,0 +1,24 @@
+<h2>Create or Update Article</h2>
+
+{{ form_start(form) }}
+<table>
+	<tbody>
+		<tr>
+			<th>Title:</th>
+			<td>{{ form_widget(form.title) }}</td>
+		</tr>
+		<tr>
+			<th>Author:</th>
+			<td>{{ form_widget(form.author) }}</td>
+		</tr>
+		<tr>
+			<th>Article Body:</th>
+			<td>{{ form_widget(form.body) }}</td>
+		</tr>
+		<tr>
+			<th></th>
+			<td>{{ form_widget(form.save) }}</td>
+		</tr>
+	</tbody>
+</table>
+{{ form_end(form) }}

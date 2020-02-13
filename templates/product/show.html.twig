@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+{% block title %} {{ product.name }} {% endblock %}
+
+{% block body %}
+<h1>{{ product.name  }} Data</h1>
+<a href="/new/show" class="btn btn-info float-right"><i class="fa fa-arrow-left"> back</i></a>
+<br><br>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Price</th>
+			<th>Desciption</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{ product.name }}</td>
+			<td>{{ product.price }}</td>
+			<td>{{ product.description }}</td>
+		</tr>
+	</tbody>
+</table>
+
+{% endblock %}
