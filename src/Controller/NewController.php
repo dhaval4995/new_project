@@ -82,13 +82,8 @@ class NewController extends AbstractController
                 $originalFilename = pathinfo($brochurefilename->getClientOriginalName(), PATHINFO_FILENAME);
                 // $safeFilename = transliterator_transliterate('Any-Latin; Latin-ASCII; [^A-Za-z0-9_] remove; Lower()',$originalFilename);
                 $newFilename = $originalFilename.'-'.uniqid().','.$brochurefilename->guessExtension();
+
                 $brochurefilename->move($this->getParameter('brochures_directory'),$newFilename);
-                //  try {
-                //     $brochurefilename->move(
-                //         $this->getParameter('brochures_directory'),$newFilename);
-                // } catch (FileException $e) {
-                //     // ... handle exception if something happens during file upload
-                // }
             }
             dump($newFilename);
             exit();
